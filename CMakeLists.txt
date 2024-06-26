@@ -108,7 +108,7 @@ install(FILES ${CMAKE_BINARY_DIR}/${pkg_conf_file}
 configure_file(
   "${PROJECT_SOURCE_DIR}/cmake/uninstall.cmake.in"
   "${PROJECT_BINARY_DIR}/uninstall.cmake" IMMEDIATE @ONLY)
-add_custom_target(uninstall
+add_custom_target(${PROJECT_NAME}_uninstall
   "${CMAKE_COMMAND}" -P "${PROJECT_BINARY_DIR}/uninstall.cmake")
 
 message(STATUS "Configuration successful. Type make to compile urdfdom")
